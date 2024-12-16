@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import userRoutes from './routes/user.route.js';
+import authRoutes from './routes/auth.route.js';
 
 const app = express();
 
@@ -15,3 +17,8 @@ mongoose.connect(process.env.MONGODB).then(() => {
 }).catch((error) => {
     console.log(error);
 });
+
+app.use(express.json());
+// Routes
+app.use('/api/user', userRoutes);
+app.use('/api/auth', authRoutes);
