@@ -11,6 +11,7 @@ export default function Header() {
     <Navbar className="border-b-2">
         <Link to="/" className="self-center whitespace-nowrap text-sm sm:text-xl dark:text-white">
             <span className='px-2 py-2 bg-gradient-to-r from-pink-500 via-pink-400 to-orange-500 rounded-lg text-white'>Swiftify</span>
+            Academy
         </Link>
         <form>
             <TextInput type="text" placeholder="Search..." rightIcon={ AiOutlineSearch } className="hidden lg:inline"/>
